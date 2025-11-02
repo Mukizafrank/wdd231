@@ -1,0 +1,50 @@
+/* Media Query for larger screens */
+@media (min-width: 768px) {
+    /* Navigation */
+    .hamburger {
+        display: none;
+    }
+    
+    nav {
+        display: block !important;
+        background: transparent;
+    }
+    
+    .navigation {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    .navigation li {
+        border-bottom: none;
+    }
+    
+    .navigation a {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+    }
+    
+    /* Course Grid */
+    .course-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .filter-buttons {
+        justify-content: center;
+    }
+    
+    /* Header Layout */
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    /* Social Links */
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+}

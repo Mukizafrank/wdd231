@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD231 - Course Home Page</title>
+    <meta name="description" content="WDD231 Course Home Page - Web Frontend Development I">
+    <meta name="author" content="Your Name">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    
+    <!-- JavaScript -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <span class="name">Mukiza Frank</span>
+            <button class="hamburger" aria-label="Toggle navigation">☰</button>
+        </div>
+        
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="chamber.html">Chamber</a></li>
+                <li><a href="final.html">Final</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+        
+        <section class="hero">
+            <h2>Welcome to WDD231</h2>
+            <p>Web Frontend Development I</p>
+        </section>
+        
+        <section class="certificate">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="filter-buttons">
+                <button data-filter="all">All Courses</button>
+                <button data-filter="WDD">WDD Courses</button>
+                <button data-filter="CSE">CSE Courses</button>
+            </div>
+            <div id="course-cards" class="course-grid"></div>
+            <div class="credit-total">Total Credits: <span id="total-credits">0</span></div>
+        </section>
+        
+        <section class="about">
+            <h2>About Me</h2>
+            <p>I'm a web development student passionate about creating user-friendly, accessible websites. Currently pursuing my degree in Software Development with a focus on front-end technologies.
+                When I'm not coding, I enjoy sprorts.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+           <a href="https://github.com/Mukizafrank" target="_blank"><img src="images/github.png" alt="github"  width="24" height="24"></a>
+           <a href="https://linkedin.com/in/yourprofile" target="_blank"> <img src="images/linkedin.png" alt="LinkedIn" width="24" height="24"></a>
+
+        </div>
+        
+        <div class="footer-info">
+            <p>&copy; <span id="currentYear"></span> Mukiza Frank| Rwanda</p>
+        </div>
+        
+        <div class="last-modified">
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>
