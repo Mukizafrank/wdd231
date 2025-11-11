@@ -1,0 +1,33 @@
+/* === large.css === */
+
+/* Hide hamburger and show nav inline */
+#menuButton {
+  display: none;
+}
+
+#navMenu {
+  display: block !important;
+}
+
+#navMenu ul {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin: 0;
+}
+
+#navMenu li {
+  border: none;
+}
+
+#members.grid-view {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* List view (desktop) */
+#members.list-view .member-card {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  text-align: left;
+}

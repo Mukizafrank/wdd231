@@ -1,0 +1,68 @@
+[
+  {
+    "name": "GreenTech Solutions",
+    "address": "45 Riverside Drive, Kigali",
+    "phone": "+250 788 123 456",
+    "website": "https://greentech.rw",
+    "image": "images/greentech.jpg",
+    "membership": 3,
+    "description": "Innovative green energy solutions for sustainable growth."
+  },
+  {
+    "name": "Coffee Paradise",
+    "address": "12 Downtown St, Kigali",
+    "phone": "+250 783 789 000",
+    "website": "https://coffeeparadise.rw",
+    "image": "images/coffeeparadise.jpg",
+    "membership": 2,
+    "description": "A local coffee brand supporting Rwandan farmers."
+  },
+
+  
+  {
+    "name": "Kigali Tech Hub",
+    "address": "78 Innovation Ave, Kigali",
+    "phone": "+250 788 555 123",
+    "website": "https://kigalitechhub.rw",
+    "image": "images/techhub.jpg",
+    "membership": 3,
+    "description": "Co-working space and incubator for tech startups and entrepreneurs."
+  },
+  {
+    "name": "Rwanda Crafts Collective",
+    "address": "23 Artisan Road, Kigali",
+    "phone": "+250 783 456 789",
+    "website": "https://rwandacrafts.rw",
+    "image": "images/craftscollective.jpg",
+    "membership": 2,
+    "description": "Handcrafted traditional Rwandan art and home decor items."
+  },
+  {
+    "name": "Urban Farms Rwanda",
+    "address": "56 Green Valley, Kigali",
+    "phone": "+250 788 777 888",
+    "website": "https://urbanfarms.rw",
+    "image": "images/urbanfarms.jpg",
+    "membership": 1,
+    "description": "Urban agriculture solutions and fresh organic produce delivery."
+  },
+  {
+    "name": "Kigali Auto Care",
+    "address": "89 Motor City, Kigali",
+    "phone": "+250 783 222 333",
+    "website": "https://kigalicarcare.rw",
+    "image": "images/autocare.jpg",
+    "membership": 2,
+    "description": "Complete automotive services and maintenance for all vehicle types."
+  },
+  {
+    "name": "Rwanda Digital Media",
+    "address": "34 Creative Plaza, Kigali",
+    "phone": "+250 788 999 000",
+    "website": "https://rwandadigital.rw",
+    "image": "images/digitalmedia.jpg",
+    "membership": 3,
+    "description": "Full-service digital marketing and media production agency."
+  }
+
+]

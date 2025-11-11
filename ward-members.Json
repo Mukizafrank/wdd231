@@ -1,0 +1,28 @@
+{
+  "familyName": "Williams",
+  "moveInDate": "2024-08-20",
+  "familySize": 4,
+  "bishopricVisited": true,
+  "familyMembers": [
+    {
+      "name": "Robert Williams",
+      "gender": "male",
+      "birthdate": "1978-11-05"
+    },
+    {
+      "name": "Sarah Williams",
+      "gender": "female",
+      "birthdate": "1980-04-22"
+    },
+    {
+      "name": "Jessica Williams",
+      "gender": "female",
+      "birthdate": "2002-03-15"
+    },
+    {
+      "name": "Michael Williams",
+      "gender": "male",
+      "birthdate": "2005-09-10"
+    }
+  ]
+}
