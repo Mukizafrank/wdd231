@@ -31,3 +31,50 @@
   gap: 1em;
   text-align: left;
 }
+
+
+/* === Home Page Desktop Styles === */
+
+/* Hero Section */
+.hero-image {
+  height: 500px;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+}
+
+/* Current Events */
+.events-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Weather Section */
+.weather-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.current-weather {
+  margin-bottom: 0;
+}
+
+.forecast-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Spotlights Section */
+.spotlight-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Footer */
+.footer-info {
+  grid-template-columns: 1fr 1fr;
+}

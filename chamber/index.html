@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kigali Chamber of Commerce - Connecting businesses, building community">
+  <meta name="author" content="Mukiza Frank">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:title" content="Kigali Chamber of Commerce">
+  <meta property="og:description" content="Connecting local businesses in Kigali, Rwanda">
+  <meta property="og:image" content="images/preview.png">
+  <meta property="og:url" content="https://Mukizafrank.github.io/wdd231/chamber/index.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 640px)">
+  <title>Kigali Chamber of Commerce - Home</title>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Kigali Chamber of Commerce</h1>
+      <button id="menuButton" aria-label="Open Menu">☰</button>
+    </div>
+
+    <nav id="navMenu">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-image">
+        <picture>
+          <source media="(max-width: 768px)" srcset="images/hero-mobile.jpg">
+          <source media="(min-width: 769px)" srcset="images/hero-desktop.webp">
+          <img src="images/hero-placeholder.jpg" alt="Kigali cityscape with modern buildings" loading="lazy">
+        </picture>
+        <div class="hero-content">
+          <h2>Welcome to Kigali</h2>
+          <p>Building a stronger business community together</p>
+          <a href="join.html" class="cta-button">Join the Chamber</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Current Events Section -->
+    <section class="current-events">
+      <h2>Current Events</h2>
+      <div class="events-grid">
+        <article class="event-card">
+          <h3>Business Networking Mixer</h3>
+          <p class="event-date">March 15, 2024 • 6:00 PM</p>
+          <p>Connect with local entrepreneurs and business leaders at Kigali Convention Center.</p>
+        </article>
+        <article class="event-card">
+          <h3>Startup Pitch Competition</h3>
+          <p class="event-date">March 22, 2024 • 9:00 AM</p>
+          <p>Showcase your innovative business idea and win funding opportunities.</p>
+        </article>
+        <article class="event-card">
+          <h3>Digital Marketing Workshop</h3>
+          <p class="event-date">April 5, 2024 • 2:00 PM</p>
+          <p>Learn strategies to grow your online presence and reach new customers.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="weather">
+      <h2>Kigali Weather</h2>
+      <div class="weather-container">
+        <div class="current-weather">
+          <h3>Current Conditions</h3>
+          <div id="current-temp" class="temp-large">--°F</div>
+          <div id="weather-desc" class="weather-desc">--</div>
+          <div id="weather-icon" class="weather-icon"></div>
+          <div id="humidity">Humidity: --%</div>
+        </div>
+        <div class="forecast">
+          <h3>3-Day Forecast</h3>
+          <div id="forecast-container" class="forecast-grid">
+            <!-- Forecast will be populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Spotlights Section -->
+    <section class="spotlights">
+      <h2>Member Spotlights</h2>
+      <div id="spotlight-container" class="spotlight-grid">
+        <!-- Spotlights will be populated by JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-info">
+        <div class="contact">
+          <h3>Contact Us</h3>
+          <p>📞 +250 788 123 456</p>
+          <p>✉️ info@kigalichamber.org</p>
+          <p>📍 123 Business District, Kigali, Rwanda</p>
+        </div>
+      <div class="social">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank" aria-label="Visit our Facebook page">
+            <img src="images/facebook-icon.svg" alt="Facebook" width="24" height="24">
+          </a>
+          <a href="https://twitter.com" target="_blank" aria-label="Visit our Twitter page">
+            <img src="images/twitter-icon.svg" alt="Twitter" width="24" height="24">
+          </a>
+          <a href="https://linkedin.com" target="_blank" aria-label="Visit our LinkedIn page">
+            <img src="images/linkedin-icon.svg" alt="LinkedIn" width="24" height="24">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Kigali Chamber of Commerce</p>
+      <p>Created by Mukiza Frank | WDD 231</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js" type="module"></script>
+</body>
+</html>
