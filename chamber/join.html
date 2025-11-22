@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join the Kigali Chamber of Commerce - Membership Application">
+  <meta name="author" content="Mukiza Frank">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:title" content="Join Kigali Chamber of Commerce">
+  <meta property="og:description" content="Apply for membership with Kigali Chamber of Commerce">
+  <meta property="og:image" content="images/preview.png">
+  <meta property="og:url" content="https://Mukizafrank.github.io/wdd231/chamber/join.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 640px)">
+  <title>Join Chamber - Kigali Chamber of Commerce</title>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Kigali Chamber of Commerce</h1>
+      <button id="menuButton" aria-label="Open Menu">☰</button>
+    </div>
+
+    <nav id="navMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="join.html" class="active">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="join-main">
+    <h2>Membership Application</h2>
+    
+    <div class="form-container">
+      <form method="get" action="thankyou.html" class="membership-form">
+        <label>First Name *
+          <input type="text" name="firstname" title="Enter your first name" autocomplete="given-name" required>
+        </label>
+
+        <label>Last Name *
+          <input type="text" name="lastname" title="Enter your last name" autocomplete="family-name" required>
+        </label>
+
+        <label>Organization Title
+          <input type="text" name="title" title="Enter your organizational title" autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}">
+        </label>
+
+        <label>Email *
+          <input type="email" name="email" title="Enter your email address" autocomplete="email" placeholder="user@example.com" required>
+        </label>
+
+        <label>Mobile Phone *
+          <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
+        </label>
+
+        <label>Business/Organization Name *
+          <input type="text" name="organization" title="Enter your business or organization name" autocomplete="organization" required>
+        </label>
+
+        <fieldset>
+          <legend>Membership Level *</legend>
+          <label><input type="radio" name="membership" value="np" required> NP Membership</label>
+          <label><input type="radio" name="membership" value="bronze"> Bronze Membership</label>
+          <label><input type="radio" name="membership" value="silver"> Silver Membership</label>
+          <label><input type="radio" name="membership" value="gold"> Gold Membership</label>
+        </fieldset>
+
+        <label>Business Description
+          <textarea name="description" title="Describe your business or organization"></textarea>
+        </label>
+
+        <input type="hidden" name="timestamp" id="timestamp">
+        <input type="submit" value="Apply for Membership">
+      </form>
+
+      <aside class="membership-cards">
+        <div class="card" id="np-card">
+          <h3>NP Membership</h3>
+          <p>For non-profit organizations (no fee)</p>
+          <button class="info-btn" data-modal="np-modal">Learn More</button>
+        </div>
+        
+        <div class="card" id="bronze-card">
+          <h3>Bronze Membership</h3>
+          <p>Essential benefits for growing businesses</p>
+          <button class="info-btn" data-modal="bronze-modal">Learn More</button>
+        </div>
+        
+        <div class="card" id="silver-card">
+          <h3>Silver Membership</h3>
+          <p>Enhanced visibility and networking</p>
+          <button class="info-btn" data-modal="silver-modal">Learn More</button>
+        </div>
+        
+        <div class="card" id="gold-card">
+          <h3>Gold Membership</h3>
+          <p>Premium benefits and maximum exposure</p>
+          <button class="info-btn" data-modal="gold-modal">Learn More</button>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Modal Dialogs -->
+    <dialog id="np-modal">
+      <h2>NP Membership Benefits</h2>
+      <ul>
+        <li>Free membership for non-profit organizations</li>
+        <li>Included in member directory</li>
+        <li>Access to networking events</li>
+        <li>Monthly newsletter</li>
+      </ul>
+      <button class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="bronze-modal">
+      <h2>Bronze Membership Benefits</h2>
+      <ul>
+        <li>All NP benefits plus:</li>
+        <li>Business listing on our website</li>
+        <li>10% discount on event tickets</li>
+        <li>Basic training workshops</li>
+        <li>Annual fee: $100</li>
+      </ul>
+      <button class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="silver-modal">
+      <h2>Silver Membership Benefits</h2>
+      <ul>
+        <li>All Bronze benefits plus:</li>
+        <li>Featured business spotlight</li>
+        <li>25% discount on event tickets</li>
+        <li>Advanced training sessions</li>
+        <li>Priority networking</li>
+        <li>Annual fee: $250</li>
+      </ul>
+      <button class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="gold-modal">
+      <h2>Gold Membership Benefits</h2>
+      <ul>
+        <li>All Silver benefits plus:</li>
+        <li>Home page featured position</li>
+        <li>50% discount on event tickets</li>
+        <li>Exclusive VIP events</li>
+        <li>Dedicated business consultant</li>
+        <li>Annual fee: $500</li>
+      </ul>
+      <button class="close-modal">Close</button>
+    </dialog>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-info">
+        <div class="contact">
+          <h3>Contact Us</h3>
+          <p>📞 +250 788 123 456</p>
+          <p>✉️ info@kigalichamber.org</p>
+          <p>📍 123 Business District, Kigali, Rwanda</p>
+        </div>
+        <div class="social">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="https://facebook.com" target="_blank" aria-label="Visit our Facebook page">
+              <img src="images/facebook-icon.svg" alt="Facebook" width="24" height="24">
+            </a>
+            <a href="https://twitter.com" target="_blank" aria-label="Visit our Twitter page">
+              <img src="images/twitter-icon.svg" alt="Twitter" width="24" height="24">
+            </a>
+            <a href="https://linkedin.com" target="_blank" aria-label="Visit our LinkedIn page">
+              <img src="images/linkedin-icon.svg" alt="LinkedIn" width="24" height="24">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Kigali Chamber of Commerce</p>
+        <p>Created by Mukiza Frank | WDD 231</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js" type="module"></script>
+  <script src="scripts/join.js" type="module"></script>
+</body>
+</html>

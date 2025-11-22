@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thank you for joining Kigali Chamber of Commerce">
+  <meta name="author" content="Mukiza Frank">
+  <title>Thank You - Kigali Chamber of Commerce</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 640px)">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Kigali Chamber of Commerce</h1>
+      <button id="menuButton" aria-label="Open Menu">☰</button>
+    </div>
+    <nav id="navMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="thankyou-main">
+    <h2>Thank You for Your Application!</h2>
+    <div class="application-summary">
+      <h3>Application Received</h3>
+      <p><strong>Name:</strong> <span id="display-name"></span></p>
+      <p><strong>Email:</strong> <span id="display-email"></span></p>
+      <p><strong>Phone:</strong> <span id="display-phone"></span></p>
+      <p><strong>Organization:</strong> <span id="display-organization"></span></p>
+      <p><strong>Application Date:</strong> <span id="display-timestamp"></span></p>
+    </div>
+    <p>We will review your application and contact you within 2 business days.</p>
+    <a href="index.html" class="back-home">Return to Homepage</a>
+  </main>
+
+  <footer>
+    <!-- Same footer as join.html -->
+  </footer>
+
+  <script src="scripts/main.js" type="module"></script>
+  <script src="scripts/thankyou.js" type="module"></script>
+</body>
+</html>
