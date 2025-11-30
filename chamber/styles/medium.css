@@ -1,0 +1,36 @@
+/* Medium Screens (641px - 1024px) */
+@media screen and (min-width: 641px) {
+    .discover-grid {
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .attraction-card:nth-child(1) { grid-area: card1; }
+    .attraction-card:nth-child(2) { grid-area: card2; }
+    .attraction-card:nth-child(3) { grid-area: card3; }
+    .attraction-card:nth-child(4) { grid-area: card4; }
+    .attraction-card:nth-child(5) { grid-area: card5; }
+    .attraction-card:nth-child(6) { grid-area: card6; }
+    .attraction-card:nth-child(7) { grid-area: card7; }
+    .attraction-card:nth-child(8) { grid-area: card8; }
+
+    /* Hover effects for medium and larger screens only */
+    .attraction-card img {
+        transition: all 0.3s ease;
+    }
+
+    .attraction-card img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        filter: brightness(1.1) contrast(1.1);
+    }
+
+    .discover-main {
+        padding: 2rem;
+    }
+}

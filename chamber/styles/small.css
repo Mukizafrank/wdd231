@@ -513,3 +513,121 @@ dialog ul {
     flex: 1;
   }
 }
+
+
+/* Discover Page Styles - Small Screens (320px - 640px) */
+.discover-main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.visit-message {
+    background-color: #2c5530;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#close-message {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.discover-grid {
+    display: grid;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+    gap: 2rem;
+}
+
+.attraction-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    grid-area: auto;
+}
+
+.attraction-card h2 {
+    color: #2c5530;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.attraction-card figure {
+    margin: 0 0 1rem 0;
+}
+
+.attraction-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.attraction-card figcaption {
+    font-style: italic;
+    color: #666;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.attraction-card address {
+    font-style: normal;
+    margin-bottom: 1rem;
+    color: #555;
+    font-weight: bold;
+}
+
+.attraction-card p {
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+.learn-more {
+    background-color: #4a7c59;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+    background-color: #3a6547;
+}
