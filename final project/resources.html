@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Essential hiking resources including beginner's guide, packing checklist, safety guidelines, and weather information for hiking in Rwanda.">
+    <meta name="author" content="Your Name">
+    <title>Planning Resources | Trail Tracker Rwanda</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <script type="module" src="scripts/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="Trail Tracker Rwanda Logo" width="50" height="50">
+                <h1>Trail Tracker Rwanda</h1>
+            </a>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="trails.html">Trail Directory</a></li>
+                    <li><a href="resources.html" class="active">Planning Resources</a></li>
+                    <li><a href="index.html#contact-form">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Hiking Planning Resources</h1>
+                <p>Everything you need to prepare for a safe and enjoyable hiking experience in Rwanda</p>
+            </div>
+        </section>
+
+        <section id="beginners-guide" class="resource-section">
+            <div class="container">
+                <h2>Beginner's Hiking Guide</h2>
+                <div class="guide-content">
+                    <div class="guide-section">
+                        <h3>Getting Started</h3>
+                        <ul>
+                            <li><strong>Choose the right trail:</strong> Start with easy trails under 5km to build confidence</li>
+                            <li><strong>Understand difficulty levels:</strong> Easy = gentle slopes, Moderate = some steep sections, Hard = challenging terrain</li>
+                            <li><strong>Check weather conditions:</strong> Rwanda has two rainy seasons (March-May, October-November)</li>
+                            <li><strong>Hike with others:</strong> Especially recommended for beginners</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="guide-section">
+                        <h3>Physical Preparation</h3>
+                        <ul>
+                            <li>Start with regular walks to build stamina</li>
+                            <li>Practice on local hills if possible</li>
+                            <li>Stay hydrated before, during, and after your hike</li>
+                            <li>Listen to your body and take breaks when needed</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="guide-section">
+                        <h3>Mental Preparation</h3>
+                        <ul>
+                            <li>Set realistic expectations</li>
+                            <li>Research your chosen trail thoroughly</li>
+                            <li>Have a positive mindset</li>
+                            <li>Remember it's about enjoying nature, not racing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="packing-checklist" class="resource-section">
+            <div class="container">
+                <h2>Essential Packing Checklist</h2>
+                <div class="checklist-container">
+                    <div class="checklist-column">
+                        <h3>Essential Gear</h3>
+                        <ul class="checklist" id="gear-checklist">
+                            <li><input type="checkbox" id="gear1"><label for="gear1">Sturdy hiking shoes or boots</label></li>
+                            <li><input type="checkbox" id="gear2"><label for="gear2">Comfortable moisture-wicking clothing</label></li>
+                            <li><input type="checkbox" id="gear3"><label for="gear3">Rain jacket or poncho</label></li>
+                            <li><input type="checkbox" id="gear4"><label for="gear4">Backpack (20-30 liters)</label></li>
+                            <li><input type="checkbox" id="gear5"><label for="gear5">Water (2+ liters per person)</label></li>
+                            <li><input type="checkbox" id="gear6"><label for="gear6">High-energy snacks</label></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="checklist-column">
+                        <h3>Safety Items</h3>
+                        <ul class="checklist" id="safety-checklist">
+                            <li><input type="checkbox" id="safety1"><label for="safety1">First aid kit</label></li>
+                            <li><input type="checkbox" id="safety2"><label for="safety2">Map and compass/GPS</label></li>
+                            <li><input type="checkbox" id="safety3"><label for="safety3">Whistle</label></li>
+                            <li><input type="checkbox" id="safety4"><label for="safety4">Headlamp or flashlight</label></li>
+                            <li><input type="checkbox" id="safety5"><label for="safety5">Sun protection (hat, sunscreen)</label></li>
+                            <li><input type="checkbox" id="safety6"><label for="safety6">Emergency contact information</label></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="checklist-column">
+                        <h3>Optional But Useful</h3>
+                        <ul class="checklist" id="optional-checklist">
+                            <li><input type="checkbox" id="opt1"><label for="opt1">Hiking poles</label></li>
+                            <li><input type="checkbox" id="opt2"><label for="opt2">Camera or smartphone</label></li>
+                            <li><input type="checkbox" id="opt3"><label for="opt3">Binoculars</label></li>
+                            <li><input type="checkbox" id="opt4"><label for="opt4">Field guide (birds, plants)</label></li>
+                            <li><input type="checkbox" id="opt5"><label for="opt5">Lightweight towel</label></li>
+                            <li><input type="checkbox" id="opt6"><label for="opt6">Extra socks</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <button id="reset-checklist" class="btn btn-outline">Reset Checklist</button>
+                <button id="save-checklist" class="btn btn-secondary">Save Checklist</button>
+            </div>
+        </section>
+
+        <section id="safety-guidelines" class="resource-section">
+            <div class="container">
+                <h2>Safety Guidelines</h2>
+                <div class="safety-grid">
+                    <article class="safety-card">
+                        <h3>Before You Hike</h3>
+                        <ul>
+                            <li>Check weather forecasts</li>
+                            <li>Inform someone of your plans</li>
+                            <li>Review trail conditions</li>
+                            <li>Ensure you have necessary permits</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="safety-card">
+                        <h3>During Your Hike</h3>
+                        <ul>
+                            <li>Stay on marked trails</li>
+                            <li>Drink water regularly</li>
+                            <li>Watch your step on uneven terrain</li>
+                            <li>Be aware of wildlife</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="safety-card">
+                        <h3>Emergency Procedures</h3>
+                        <ul>
+                            <li>Stay calm if lost</li>
+                            <li>Use whistle (3 short bursts = help)</li>
+                            <li>Conserve energy and water</li>
+                            <li>Stay visible and make noise</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="safety-card">
+                        <h3>Rwanda Specific</h3>
+                        <ul>
+                            <li>Altitude considerations (1000-4500m)</li>
+                            <li>Malaria prevention in certain areas</li>
+                            <li>Respect local customs and communities</li>
+                            <li>Carry copy of passport/ID</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="weather-section">
+            <div class="container">
+                <h2>Weather Information</h2>
+                <div class="weather-info">
+                    <div class="weather-card">
+                        <h3>Best Time to Hike</h3>
+                        <p><strong>Dry Seasons:</strong> June-September & December-February</p>
+                        <p><strong>Average Temperatures:</strong> 20-27°C (68-81°F)</p>
+                        <p><strong>Rainy Seasons:</strong> March-May & October-November</p>
+                    </div>
+                    
+                    <div class="weather-card">
+                        <h3>Altitude Considerations</h3>
+                        <p><strong>High Altitude:</strong> Volcanic regions (2500-4500m) - can be cold</p>
+                        <p><strong>Moderate Altitude:</strong> Most trails (1500-2500m) - pleasant temperatures</p>
+                        <p><strong>Lower Regions:</strong> Warmer and more humid</p>
+                    </div>
+                    
+                    <div class="weather-card">
+                        <h3>What to Expect</h3>
+                        <p>Rwanda's climate is generally mild and pleasant for hiking year-round. Morning showers are common even in dry seasons. Always be prepared for sudden weather changes in mountainous areas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Trail Tracker Rwanda</h3>
+                <p>Your guide to discovering Rwanda's beautiful hiking trails.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="trails.html">Trail Directory</a></li>
+                    <li><a href="resources.html">Planning Resources</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <p>Watch our project video: <a href="https://youtube.com/your-video-link" target="_blank">Video Demonstration</a></p>
+                <p>Email: contact@trailtrackerrwanda.com</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Trail Tracker Rwanda. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

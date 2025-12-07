@@ -1,0 +1,237 @@
+/* Large screen styles - 768px and up */
+
+@media screen and (min-width: 768px) {
+    /* Base Typography */
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.75rem; }
+    h4 { font-size: 1.5rem; }
+    
+    body {
+        font-size: 18px;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+    
+    /* Header */
+    .header-container {
+        padding: 0 var(--spacing-lg);
+    }
+    
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: var(--spacing-xl) var(--spacing-lg);
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero-content h2 {
+        font-size: 3rem;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .hero-content p {
+        font-size: 1.5rem;
+        max-width: 800px;
+        margin: 0 auto var(--spacing-lg);
+    }
+    
+    /* Featured Trail */
+    .featured-trail {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    .featured-image img {
+        height: 100%;
+        min-height: 300px;
+    }
+    
+    .featured-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    /* Quick Search */
+    .search-options {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--spacing-xl);
+    }
+    
+    .search-card {
+        min-width: 300px;
+    }
+    
+    /* Resources Preview */
+    .resources-grid {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--spacing-lg);
+    }
+    
+    .resource-card {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    /* Contact Form */
+    .contact-form .container {
+        max-width: 600px;
+    }
+    
+    /* Footer */
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .footer-section {
+        flex: 1;
+    }
+    
+    /* Filter Section */
+    .filter-controls {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        gap: var(--spacing-md);
+    }
+    
+    .filter-group {
+        flex: 1;
+        min-width: 150px;
+        max-width: 200px;
+    }
+    
+    /* Trails Grid */
+    .trails-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: var(--spacing-lg);
+    }
+    
+    /* Resource Sections */
+    .guide-content,
+    .checklist-container,
+    .safety-grid,
+    .weather-info {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .guide-section,
+    .checklist-column,
+    .safety-card,
+    .weather-card {
+        flex: 1;
+        min-width: 300px;
+    }
+    
+    .checklist-container {
+        gap: var(--spacing-lg);
+    }
+    
+    .safety-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Form Action Page */
+    .confirmation-section {
+        padding: var(--spacing-xl);
+    }
+    
+    .action-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--spacing-md);
+    }
+    
+    /* Page Headers */
+    .page-header {
+        padding: var(--spacing-xl) var(--spacing-lg);
+    }
+}
+
+/* Extra large screens - 1024px and up */
+@media screen and (min-width: 1024px) {
+    .trails-grid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+    
+    .safety-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .hero-content h2 {
+        font-size: 3.5rem;
+    }
+    
+    .resources-grid {
+        gap: var(--spacing-xl);
+    }
+    
+    .featured-trail {
+        grid-template-columns: 2fr 3fr;
+    }
+}
+
+/* Ultra large screens - 1440px and up */
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .trails-grid {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+    }
+
+
+
+    /* MODAL LARGE SCREEN */
+@media screen and (min-width: 768px) {
+    .modal-content {
+        max-width: 700px;
+        margin: 2rem auto;
+    }
+    
+    .modal-image {
+        height: 300px;
+    }
+    
+    .modal-details {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .modal-description,
+    .modal-features,
+    .modal-additional {
+        padding: 1.5rem;
+    }
+    
+    .modal-actions {
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 1.5rem;
+    }
+    
+    .modal-actions .btn {
+        width: auto;
+        min-width: 150px;
+    }
+}
+}

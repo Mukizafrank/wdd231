@@ -1,0 +1,317 @@
+/* Mobile Navigation Base Styles */
+.nav-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+    width: 24px;
+    height: 3px;
+    background-color: var(--light-color);
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    background-color: var(--light-color);
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    bottom: -8px;
+}
+
+/* Hamburger animation when active */
+.nav-toggle[aria-expanded="true"] .hamburger {
+    background-color: transparent;
+}
+
+.nav-toggle[aria-expanded="true"] .hamburger::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .hamburger::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+/* Navigation Menu Container */
+.main-nav {
+    position: relative;
+}
+
+/* Navigation Menu - Default/Hidden State */
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Links Base Styles */
+.nav-menu a {
+    color: var(--light-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.nav-menu a:hover {
+    color: var(--accent-color);
+}
+
+.nav-menu a.active {
+    font-weight: 600;
+}
+
+/* =============================== */
+/* MOBILE STYLES (under 768px)     */
+/* =============================== */
+@media screen and (max-width: 767px) {
+    /* Show hamburger button on mobile */
+    .nav-toggle {
+        display: flex;
+    }
+    
+    /* Mobile Navigation Menu */
+    .nav-menu {
+        position: fixed;
+        top: 72px; /* Adjust to match your header height */
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        padding: var(--spacing-lg) var(--spacing-md);
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        gap: var(--spacing-md);
+        align-items: center;
+        z-index: 999;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        max-height: calc(100vh - 72px);
+        overflow-y: auto;
+    }
+    
+    /* Show menu when active */
+    .nav-menu.active {
+        display: flex;
+        animation: slideDown 0.3s ease;
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Mobile menu items */
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Mobile menu links */
+    .nav-menu a {
+        padding: var(--spacing-md);
+        font-size: 1.125rem;
+        border-radius: var(--radius-md);
+        transition: all 0.3s ease;
+    }
+    
+    .nav-menu a:hover,
+    .nav-menu a:focus {
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+    }
+    
+    .nav-menu a.active {
+        background-color: var(--secondary-color);
+        color: var(--light-color);
+    }
+    
+    /* Active state for hamburger */
+    .nav-toggle[aria-expanded="true"] {
+        position: relative;
+        z-index: 1000;
+    }
+    
+    /* Close menu by clicking outside */
+    .nav-menu.active ~ .nav-overlay {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+    }
+}
+
+/* =============================== */
+/* DESKTOP STYLES (768px and up)   */
+/* =============================== */
+@media screen and (min-width: 768px) {
+    /* Hide hamburger button on desktop */
+    .nav-toggle {
+        display: none;
+    }
+    
+    /* Desktop Navigation Menu */
+    .nav-menu {
+        display: flex !important; /* Always show on desktop */
+        flex-direction: row;
+        gap: var(--spacing-lg);
+        background-color: transparent;
+        position: static;
+        width: auto;
+        padding: 0;
+        box-shadow: none;
+        max-height: none;
+        overflow: visible;
+    }
+    
+    /* Desktop menu items */
+    .nav-menu li {
+        width: auto;
+    }
+    
+    /* Desktop menu links */
+    .nav-menu a {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: 1rem;
+        border-radius: var(--radius-sm);
+    }
+    
+    .nav-menu a:hover,
+    .nav-menu a:focus {
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: none;
+    }
+    
+    /* Active state indicator for desktop */
+    .nav-menu a.active {
+        background-color: var(--secondary-color);
+        color: var(--light-color);
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    .nav-menu a.active::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: var(--light-color);
+        margin-top: 4px;
+        border-radius: 2px;
+    }
+}
+
+/* =============================== */
+/* ACCESSIBILITY & UTILITIES       */
+/* =============================== */
+
+/* Focus styles for accessibility */
+.nav-toggle:focus,
+.nav-menu a:focus {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+/* Skip to Main Content Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    z-index: 1001;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+    .nav-menu a.active {
+        outline: 3px solid var(--light-color);
+        outline-offset: -3px;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .nav-toggle,
+    .nav-menu a,
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+        transition: none;
+    }
+    
+    .nav-menu.active {
+        animation: none;
+    }
+}
+
+/* Dropdown styles (if needed in future) */
+.nav-item.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--light-color);
+    min-width: 200px;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    color: var(--dark-color);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
+}

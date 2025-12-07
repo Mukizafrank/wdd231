@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Form submission confirmation - Trail Tracker Rwanda">
+    <title>Form Submission Confirmation</title>
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="styles/navigation.css">
+</head>
+<body>
+    <div class="form-action-container">
+        <header>
+            <h1>Trail Tracker Rwanda</h1>
+        </header>
+        
+        <main>
+            <section class="confirmation-section">
+                <h2>Thank You for Subscribing!</h2>
+                <div id="form-data-display" class="form-data">
+                    <!-- Form data will be displayed here -->
+                </div>
+                <p>Your subscription has been received. You'll receive trail updates and hiking tips soon!</p>
+                <div class="action-buttons">
+                    <a href="index.html" class="btn btn-primary">Return to Home</a>
+                    <a href="trails.html" class="btn btn-secondary">Browse Trails</a>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 Trail Tracker Rwanda</p>
+            <p><a href="attributions.html">View Attributions</a></p>
+        </footer>
+    </div>
+
+    <script>
+        // Parse and display URL parameters
+        function displayFormData() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const formDataDiv = document.getElementById('form-data-display');
+            
+            if (urlParams.toString() === '') {
+                formDataDiv.innerHTML = '<p>No form data submitted.</p>';
+                return;
+            }
+            
+            let html = '<h3>Your Information:</h3><ul>';
+            
+            for (const [key, value] of urlParams) {
+                let label = key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, ' $1');
+                let displayValue = value;
+                
+                // Format checkbox values
+                if (value === 'on') {
+                    displayValue = 'Yes';
+                }
+                
+                html += `<li><strong>${label}:</strong> ${displayValue}</li>`;
+            }
+            
+            html += '</ul>';
+            formDataDiv.innerHTML = html;
+        }
+        
+        // Display data when page loads
+        window.addEventListener('DOMContentLoaded', displayFormData);
+    </script>
+</body>
+</html>

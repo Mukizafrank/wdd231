@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trail Tracker Rwanda - Discover the best hiking trails in Rwanda with detailed guides, safety tips, and planning resources.">
+    <meta name="author" content="Your Name">
+    <meta property="og:title" content="Trail Tracker Rwanda">
+    <meta property="og:description" content="Your ultimate guide to hiking trails in Rwanda">
+    <meta property="og:image" content="images/hero-home.jpg">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/final-project">
+    <title>Trail Tracker Rwanda | Discover Hiking Trails</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <script type="module" src="scripts/main.js"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="Trail Tracker Rwanda Logo" width="50" height="50">
+                <h1>Trail Tracker Rwanda</h1>
+            </a>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="trails.html">Trail Directory</a></li>
+                    <li><a href="resources.html">Planning Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Discover Rwanda's Magnificent Hiking Trails</h2>
+                <p>Your comprehensive guide to outdoor adventures in the land of a thousand hills</p>
+                <a href="trails.html" class="btn btn-primary">Explore All Trails</a>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <div class="container">
+                <h2>Trail of the Week</h2>
+                <article class="featured-trail">
+                    <div class="featured-image">
+                        <img src="images/trail-1.jpg" alt="Mount Kigali Summit Trail" loading="lazy">
+                    </div>
+                    <div class="featured-content">
+                        <h3>Mount Kigali Summit Trail</h3>
+                        <div class="trail-meta">
+                            <span class="difficulty moderate">Moderate</span>
+                            <span class="length">8.5 km</span>
+                            <span class="location">Kigali</span>
+                            <span class="duration">3 hours</span>
+                        </div>
+                        <p>Experience panoramic views of Kigali city from the summit. This moderate trail offers a perfect day hike with beautiful scenery and diverse flora.</p>
+                        <button class="btn btn-secondary" id="view-featured-details">View Full Details</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="quick-search">
+            <div class="container">
+                <h2>Find Your Perfect Trail</h2>
+                <div class="search-options">
+                    <div class="search-card">
+                        <h3>By Difficulty</h3>
+                        <div class="difficulty-options">
+                            <button class="difficulty-btn easy" data-difficulty="easy">Easy</button>
+                            <button class="difficulty-btn moderate" data-difficulty="moderate">Moderate</button>
+                            <button class="difficulty-btn hard" data-difficulty="hard">Hard</button>
+                        </div>
+                    </div>
+                    <div class="search-card">
+                        <h3>By Location</h3>
+                        <div class="location-options">
+                            <button class="location-btn" data-location="kigali">Kigali</button>
+                            <button class="location-btn" data-location="nyungwe">Nyungwe</button>
+                            <button class="location-btn" data-location="musanze">Musanze</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="resources-preview">
+            <div class="container">
+                <h2>Essential Hiking Resources</h2>
+                <div class="resources-grid">
+                    <article class="resource-card">
+                        <h3>Beginner's Guide</h3>
+                        <p>Start your hiking journey with our comprehensive beginner's guide.</p>
+                        <a href="resources.html#beginners-guide" class="btn btn-outline">Learn More</a>
+                    </article>
+                    <article class="resource-card">
+                        <h3>Packing Checklist</h3>
+                        <p>Never forget essential gear with our detailed packing checklist.</p>
+                        <a href="resources.html#packing-checklist" class="btn btn-outline">View Checklist</a>
+                    </article>
+                    <article class="resource-card">
+                        <h3>Safety Guidelines</h3>
+                        <p>Stay safe on the trails with our important safety guidelines.</p>
+                        <a href="resources.html#safety-guidelines" class="btn btn-outline">Safety Tips</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form" id="contact-form">
+            <div class="container">
+                <h2>Get Trail Updates</h2>
+                <p>Subscribe to receive updates on new trails, hiking tips, and special offers.</p>
+                
+                <form id="newsletter-form" action="form-action.html" method="get">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required minlength="2" placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="experience">Hiking Experience:</label>
+                        <select id="experience" name="experience">
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter" checked>
+                        <label for="newsletter">Subscribe to monthly newsletter</label>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the terms and conditions</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Subscribe Now</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Trail Tracker Rwanda</h3>
+                <p>Your guide to discovering Rwanda's beautiful hiking trails.</p>
+                <p class="current-year">&copy; <span id="current-year">2024</span> Trail Tracker Rwanda</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="trails.html">Trail Directory</a></li>
+                    <li><a href="resources.html">Planning Resources</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <p>Watch our project video: <a href="#" id="video-link" target="_blank">Video Demonstration</a></p>
+                <p>Email: contact@trailtrackerrwanda.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal-container"></div>
+</body>
+</html>
